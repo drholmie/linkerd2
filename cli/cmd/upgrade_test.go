@@ -5,7 +5,6 @@ import (
 	"testing"
 
 	"github.com/linkerd/linkerd2/pkg/k8s"
-	"github.com/spf13/pflag"
 )
 
 func TestRenderUpgrade(t *testing.T) {
@@ -43,7 +42,7 @@ data:
 	}
 
 	options := newUpgradeOptionsWithDefaults()
-	flags := options.recordableFlagSet(pflag.ExitOnError)
+	flags := options.recordableFlagSet()
 
 	clientset, _, err := k8s.NewFakeClientSets(k8sConfigs...)
 	if err != nil {

@@ -205,7 +205,7 @@ func newCmdInstall() *cobra.Command {
 
 	// The base flags are recorded separately s that they can be serialized into
 	// the configuration in validateAndBuild.
-	flags := options.recordableFlagSet(pflag.ExitOnError)
+	flags := options.recordableFlagSet()
 
 	cmd := &cobra.Command{
 		Use:   "install [flags]",
@@ -256,7 +256,9 @@ func (options *installOptions) validateAndBuild(flags *pflag.FlagSet) (*installV
 }
 
 // recordableFlagSet returns flags usable during install or upgrade.
-func (options *installOptions) recordableFlagSet(e pflag.ErrorHandling) *pflag.FlagSet {
+func (options *installOptions) recordableFlagSet() *pflag.FlagSet {
+	e := pflag.ExitOnError
+
 	flags := pflag.NewFlagSet("install", e)
 
 	flags.AddFlagSet(options.proxyConfigOptions.flagSet(e))
@@ -305,7 +307,7 @@ func (options *installOptions) recordableFlagSet(e pflag.ErrorHandling) *pflag.F
 // installOnlyFlagSet includes flags that are only accessible at install-time
 // and not at upgrade-time.
 func (options *installOptions) installOnlyFlagSet(e pflag.ErrorHandling) *pflag.FlagSet {
-	flags := options.recordableFlagSet(e)
+	flags := pflag.NewFlagSet("install", e)
 
 	flags.StringVar(
 		&options.identityOptions.trustDomain, "identity-trust-domain", options.identityOptions.trustDomain,
