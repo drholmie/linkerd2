@@ -231,25 +231,11 @@ of Chrome, run:
 bin/web integration local
 ```
 This command runs all the tests inside the web/app/integration/specs directory
-If required to run tests for a particular component, run:
-
-```bash
-bin/web integration local servicemesh #servicemesh example
-```
 The following components are currently available for testing:
 sidebar
-resources
-deployments
-authorities
-namespaces
-daemonsets
-pods
-replicationcontorller
-statefulsets
-servicemesh
 
 The tests currently check if the UI is in order.
-Note that if adding UI elements, add them after the pre-existings ones so as to not effect the test's ordering.
+Note that if adding UI elements, add them after the pre-existings ones so as to not hamper the test's ordering.
 
 #### Cloud
 
@@ -302,22 +288,8 @@ To run cross-browser tests via SauceLabs, you need to do a few things first:
    few minutes.
 
 This command runs all the tests inside the web/app/integration/specs directory
-If required to run tests for a particular component, run:
-
-```bash
-bin/web integration cloud servicemesh #servicemesh example
-```
 The following components are currently available for testing:
 sidebar
-resources
-deployments
-authorities
-namespaces
-daemonsets
-pods
-replicationcontorller
-statefulsets
-servicemesh
 
 The tests currently check if the UI is in order.
 Note that if adding UI elements, add them after the pre-existings ones so as to not effect the test's ordering.

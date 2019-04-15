@@ -416,6 +416,67 @@
   version = "v1.1"
 
 [[projects]]
+  branch = "master"
+  digest = "1:3b94d3e008291b776537200fc51d273d015e221fe3334a4476d5113e9a37883c"
+  name = "github.com/linkerd/linkerd2"
+  packages = [
+    "cli/cmd",
+    "cli/install",
+    "cli/installsp",
+    "cli/static",
+    "controller/api/destination",
+    "controller/api/discovery",
+    "controller/api/public",
+    "controller/api/util",
+    "controller/gen/apis/serviceprofile",
+    "controller/gen/apis/serviceprofile/v1alpha1",
+    "controller/gen/client/clientset/versioned",
+    "controller/gen/client/clientset/versioned/fake",
+    "controller/gen/client/clientset/versioned/scheme",
+    "controller/gen/client/clientset/versioned/typed/serviceprofile/v1alpha1",
+    "controller/gen/client/clientset/versioned/typed/serviceprofile/v1alpha1/fake",
+    "controller/gen/client/informers/externalversions",
+    "controller/gen/client/informers/externalversions/internalinterfaces",
+    "controller/gen/client/informers/externalversions/serviceprofile",
+    "controller/gen/client/informers/externalversions/serviceprofile/v1alpha1",
+    "controller/gen/client/listers/serviceprofile/v1alpha1",
+    "controller/gen/common/healthcheck",
+    "controller/gen/config",
+    "controller/gen/controller/discovery",
+    "controller/gen/controller/tap",
+    "controller/gen/public",
+    "controller/identity",
+    "controller/k8s",
+    "controller/proxy-injector",
+    "controller/proxy-injector/fake",
+    "controller/proxy-injector/tmpl",
+    "controller/sp-validator",
+    "controller/sp-validator/tmpl",
+    "controller/tap",
+    "controller/webhook",
+    "pkg/addr",
+    "pkg/admin",
+    "pkg/config",
+    "pkg/filesonly",
+    "pkg/flags",
+    "pkg/healthcheck",
+    "pkg/identity",
+    "pkg/inject",
+    "pkg/k8s",
+    "pkg/profiles",
+    "pkg/prometheus",
+    "pkg/tls",
+    "pkg/util",
+    "pkg/version",
+    "proxy-init/cmd",
+    "proxy-init/iptables",
+    "testutil",
+    "web/srv",
+  ]
+  pruneopts = ""
+  revision = "46d1490f9856e79ff8a4a72a4412e8f7f41c506a"
+
+[[projects]]
   digest = "1:f290ea91c428cd9482eac37f4feba06d8774683fcd503c18efdec57c432ca484"
   name = "github.com/linkerd/linkerd2-proxy-api"
   packages = [
@@ -572,7 +633,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:cc6c60d87dac2a3e75068ffcc2020144c3fdf39fb1d49f08b83ca6e7abe560db"
+  digest = "1:a52c7b8d116880b464252b9ad9e2f63339f8c20d77222b6b4463346954be6f9f"
   name = "github.com/prometheus/procfs"
   packages = [
     ".",
@@ -1192,7 +1253,7 @@
   revision = "4242d8e6c5dba56827bb7bcf14ad11cda38f3991"
 
 [[projects]]
-  digest = "1:a96ffeefef3ae5a7eb243ce0ac10a0d9b844336e8a360cc1404b2e7903166d55"
+  digest = "1:3f139d2298325d232e7ac1b1d90762ab5e412d0f03d743a2f098d74e38107153"
   name = "k8s.io/helm"
   packages = [
     "pkg/chartutil",
@@ -1261,6 +1322,58 @@
     "github.com/linkerd/linkerd2-proxy-api/go/identity",
     "github.com/linkerd/linkerd2-proxy-api/go/net",
     "github.com/linkerd/linkerd2-proxy-api/go/tap",
+    "github.com/linkerd/linkerd2/cli/cmd",
+    "github.com/linkerd/linkerd2/cli/install",
+    "github.com/linkerd/linkerd2/cli/installsp",
+    "github.com/linkerd/linkerd2/cli/static",
+    "github.com/linkerd/linkerd2/controller/api/destination",
+    "github.com/linkerd/linkerd2/controller/api/discovery",
+    "github.com/linkerd/linkerd2/controller/api/public",
+    "github.com/linkerd/linkerd2/controller/api/util",
+    "github.com/linkerd/linkerd2/controller/gen/apis/serviceprofile",
+    "github.com/linkerd/linkerd2/controller/gen/apis/serviceprofile/v1alpha1",
+    "github.com/linkerd/linkerd2/controller/gen/client/clientset/versioned",
+    "github.com/linkerd/linkerd2/controller/gen/client/clientset/versioned/fake",
+    "github.com/linkerd/linkerd2/controller/gen/client/clientset/versioned/scheme",
+    "github.com/linkerd/linkerd2/controller/gen/client/clientset/versioned/typed/serviceprofile/v1alpha1",
+    "github.com/linkerd/linkerd2/controller/gen/client/clientset/versioned/typed/serviceprofile/v1alpha1/fake",
+    "github.com/linkerd/linkerd2/controller/gen/client/informers/externalversions",
+    "github.com/linkerd/linkerd2/controller/gen/client/informers/externalversions/internalinterfaces",
+    "github.com/linkerd/linkerd2/controller/gen/client/informers/externalversions/serviceprofile",
+    "github.com/linkerd/linkerd2/controller/gen/client/informers/externalversions/serviceprofile/v1alpha1",
+    "github.com/linkerd/linkerd2/controller/gen/client/listers/serviceprofile/v1alpha1",
+    "github.com/linkerd/linkerd2/controller/gen/common/healthcheck",
+    "github.com/linkerd/linkerd2/controller/gen/config",
+    "github.com/linkerd/linkerd2/controller/gen/controller/discovery",
+    "github.com/linkerd/linkerd2/controller/gen/controller/tap",
+    "github.com/linkerd/linkerd2/controller/gen/public",
+    "github.com/linkerd/linkerd2/controller/identity",
+    "github.com/linkerd/linkerd2/controller/k8s",
+    "github.com/linkerd/linkerd2/controller/proxy-injector",
+    "github.com/linkerd/linkerd2/controller/proxy-injector/fake",
+    "github.com/linkerd/linkerd2/controller/proxy-injector/tmpl",
+    "github.com/linkerd/linkerd2/controller/sp-validator",
+    "github.com/linkerd/linkerd2/controller/sp-validator/tmpl",
+    "github.com/linkerd/linkerd2/controller/tap",
+    "github.com/linkerd/linkerd2/controller/webhook",
+    "github.com/linkerd/linkerd2/pkg/addr",
+    "github.com/linkerd/linkerd2/pkg/admin",
+    "github.com/linkerd/linkerd2/pkg/config",
+    "github.com/linkerd/linkerd2/pkg/filesonly",
+    "github.com/linkerd/linkerd2/pkg/flags",
+    "github.com/linkerd/linkerd2/pkg/healthcheck",
+    "github.com/linkerd/linkerd2/pkg/identity",
+    "github.com/linkerd/linkerd2/pkg/inject",
+    "github.com/linkerd/linkerd2/pkg/k8s",
+    "github.com/linkerd/linkerd2/pkg/profiles",
+    "github.com/linkerd/linkerd2/pkg/prometheus",
+    "github.com/linkerd/linkerd2/pkg/tls",
+    "github.com/linkerd/linkerd2/pkg/util",
+    "github.com/linkerd/linkerd2/pkg/version",
+    "github.com/linkerd/linkerd2/proxy-init/cmd",
+    "github.com/linkerd/linkerd2/proxy-init/iptables",
+    "github.com/linkerd/linkerd2/testutil",
+    "github.com/linkerd/linkerd2/web/srv",
     "github.com/mattn/go-runewidth",
     "github.com/nsf/termbox-go",
     "github.com/pkg/browser",
@@ -1277,7 +1390,6 @@
     "github.com/spf13/cobra/doc",
     "github.com/spf13/pflag",
     "github.com/wercker/stern/stern",
-    "golang.org/x/net/context",
     "google.golang.org/grpc",
     "google.golang.org/grpc/codes",
     "google.golang.org/grpc/metadata",

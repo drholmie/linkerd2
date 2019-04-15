@@ -2,6 +2,7 @@ exports.config = {
   runner: 'local',
   user: process.env.SAUCE_USERNAME,
   key: process.env.SAUCE_ACCESS_KEY,
+  service: ['sauce'],
   sauceConnect: true,
   specs: [
       './integration/specs/**/*.js'
@@ -9,37 +10,7 @@ exports.config = {
     suites: {
     sidebar: [
         './integration/specs/sidebar/*.js'
-    ],
-    overview: [
-        './integration/specs/overview/*.js'
-    ],
-    resources: [
-         './integration/specs/resources/*.js'
-    ],
-    deployments: [
-        './integration/specs/deployments/*.js'
-    ],
-    authorities: [
-        './integration/specs/authorities/*.js'
-    ],
-    namespaces: [
-        './integration/specs/namespaces/*.js'
-    ],
-    daemonsets: [
-        './integration/specs/daemonsets/*.js'
-    ],
-    pods: [
-        './integration/specs/pods/*.js'
-    ],
-    replicationcontorller: [
-        './integration/specs/replication_cont/*.js'
-    ],
-    statefulsets: [
-        './integration/specs/statefulsets/*.js'
-    ],
-    servicemesh: [
-        './integration/specs/service_mesh/*.js'
-    ],
+    ]
 },
   // Patterns to exclude.
   exclude: [
@@ -52,12 +23,12 @@ exports.config = {
   ],
   bail: 0,
   baseUrl: 'http://localhost',
-  waitforTimeout: 10000,
-  connectionRetryTimeout: 90000,
+  waitforTimeout: 1000000,
+  connectionRetryTimeout:  90000000,
   connectionRetryCount: 3,
   framework: 'mocha',
   mochaOpts: {
       ui: 'bdd',
-      timeout: 60000
+      timeout: 6000000
   }
 }
